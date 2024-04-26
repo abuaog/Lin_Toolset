@@ -1,0 +1,12 @@
+namespace command;
+
+table Analyzer {
+URL: string;
+    motionStatus: bool;
+    motionMode: string;
+    motionSens: uint;
+    FaceDetectionStatus: bool;
+    FaceDetectionMode: string;
+    FaceDetectionHasMask: bool;
+}
+

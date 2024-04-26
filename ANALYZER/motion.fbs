@@ -1,0 +1,7 @@
+namespace motion;
+
+table Region {
+    rows: uint;
+    columns: uint;
+    cells: string;
+}

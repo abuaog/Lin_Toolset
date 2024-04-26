@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package metadata;
+option go_package = "internal/parser/analyzer/metadata";
+
+enum MessageType{
+  Motion = 0;
+  FaceDetection =1;
+}
+
+message Face {
+  float x = 1;
+  float y = 2;
+  float w = 3;
+  float h = 4;
+  bool mask = 5;
+  float maskProb = 6;
+  float faceProb = 7;
+  float recognitionProb = 8;
+  string name = 9;
+  string recognitionState = 10;
+  string image = 11;
+  int32 age =12;
+  string gender = 13;
+  string emotion = 14;
+}
+
+message Metadata{
+  MessageType MessageType=1;
+  Region MotionRegion=2;
+  repeated Face FacesDetected= 3;
+}
+
+message Region {
+  int32 rows = 1;
+  int32 columns = 2;
+  string cells = 3;
+}

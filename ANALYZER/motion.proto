@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package motion;
+
+option go_package = "behnama/pkg/protomodels/analyzer";
+
+message Region {
+   int32 rows = 1;
+   int32 columns = 2;
+   string cells = 3;
+}

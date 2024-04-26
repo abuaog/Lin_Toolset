@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package command;
+
+option go_package = "behnama/pkg/protomodels/analyzer";
+
+message Analyzer {
+    string URL = 1 ;
+    bool MotionStatus = 2;
+    string MotionMode = 3;
+    int32 MotionSens = 4;
+    bool FaceDetectionStatus = 5;
+    string FaceDetectionMode = 6;
+    bool FaceDetectionHasMask = 7;
+    string Key = 8 ;
+    string MotionRestrictedArea = 9;
+    bool FaceRecognitionStatus = 10;
+}
